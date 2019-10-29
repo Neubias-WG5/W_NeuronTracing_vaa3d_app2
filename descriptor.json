@@ -1,0 +1,161 @@
+{
+    "name": "NeuronTracing_vaa3d",
+    "container-image": {
+        "image": "neubiaswg5/w_neurontracing_vaa3d",
+        "type": "singularity"
+    },
+    "schema-version": "cytomine-0.1",
+    "description": "trace neuron with vaa3d 'app1' algorithm",
+    "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE BKG_THRESH B_256CUBE B_RADIUSFROM2D IS_GSDT IS_GAP LENGTH_THRESH IS_RESAMPLE IS_BRIGHTFIELD IS_HIGH_INTENSITY",
+    "inputs": [
+        {
+            "id": "cytomine_host",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine host",
+            "description": "Cytomine server hostname",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_public_key",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine public key",
+            "description": "Cytomine public key",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_private_key",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine private key",
+            "description": "Cytomine private key",      
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_id_project",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine project id",
+            "description": "Cytomine project id",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_id_software",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine software id",
+            "description": "Cytomine software id",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+          "default-value": 10,
+          "name": "bkg_thresh",
+          "description": "Default 10 (is specified as AUTO then auto-thresolding)",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "bkg_thresh",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 1,
+          "name": "b_256cube",
+          "description": "Default 10 (is specified as AUTO then auto-thresolding)",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "b_256cube",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 1,
+          "name": "b_RadiusFrom2D",
+          "description": "If estimate the radius of each reconstruction node from 2D plane only (1 for yes as many times the data is anisotropic, and 0 for no. Default 1 which which uses 2D estimation.)",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "b_RadiusFrom2D",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 0,
+          "name": "is_gsdt",
+          "description": "If use gray-scale distance transform (1 for yes and 0 for no. Default 0.)",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "is_gsdt",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 0,
+          "name": "is_gap",
+          "description": "If allow gap (1 for yes and 0 for no. Default 0.)",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "is_gap",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 0,
+          "name": "length_thresh",
+          "description": "Default is 5.)",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "length_thresh",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 0,
+          "name": "is_resample",
+          "description": "If allow resample (1 for yes and 0 for no. Default 1.)",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "is_resample",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 0,
+          "name": "is_brightfield",
+          "description": "If the signals are dark instead of bright (1 for yes and 0 for no. Default 0.)",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "is_brightfield",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 0,
+          "name": "is_high_intensity",
+          "description": "If the image has high intensity background (1 for yes and 0 for no. Default 0.)",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "is_high_intensity",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        }
+    ]
+}
