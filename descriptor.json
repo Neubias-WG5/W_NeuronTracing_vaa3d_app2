@@ -1,5 +1,5 @@
 {
-    "name": "NeuronTracing_vaa3d",
+    "name": "NeuronTracing_vaa3d_app2",
     "container-image": {
         "image": "neubiaswg5/w_neurontracing_vaa3d_app2",
         "type": "singularity"
